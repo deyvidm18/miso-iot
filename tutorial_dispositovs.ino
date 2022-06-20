@@ -15,10 +15,6 @@ DHT dht(dht_dpin, DHTTYPE);
 const char ssid[] = "Google_Wifi";
 //Contraseña de la red Wifi
 const char pass[] = "holabebe_2106";
-
-const long A = 1000;     //Resistencia en oscuridad en KΩ
-const int B = 15;        //Resistencia a la luz (10 Lux) en KΩ
-const int Rc = 10;       //Resistencia calibracion en KΩ
 const int LDRPin = A0;   //Pin del LDR
 
 int V;
@@ -186,20 +182,6 @@ void loop()
   float t = dht.readTemperature();
   V = analogRead(LDRPin);
   char description[10];
-  // Descripcion del valor analogo
-  /*
-  if (V < 10) {
-   description = "Sin luz";
-  } else if (V < 200) {
-   description = "Luz tenue";
-  } else if (V < 500) {
-    description = "Luz";
-  } else if (V < 800) {
-    description = "Luz Brillante";
-  } else {
-    description = "Luz muy brillante";
-  }
-  */
   
   //Transforma la información a la notación JSON para poder enviar los datos 
   //El mensaje que se envía es de la forma {"value": x}, donde x es el valor de temperatura o humedad
