@@ -181,7 +181,6 @@ void loop()
   float h = dht.readHumidity();
   float t = dht.readTemperature();
   V = analogRead(LDRPin);
-  char description[10];
   
   //Transforma la información a la notación JSON para poder enviar los datos 
   //El mensaje que se envía es de la forma {"value": x}, donde x es el valor de temperatura o humedad
