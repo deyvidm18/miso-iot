@@ -1,2 +1,2 @@
-# Repositorio MISO Reto 1 y 2 Dispositivos
+# Repositorio MISO Retos IoT
 Deyvid Martínez y Juan Pablo Feliciano
